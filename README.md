@@ -1,0 +1,4 @@
+- create a library that detects anagrams
+- provde the unit tests but strip out all the code from WordFun.Utilities except for the IAnagram
+- Let them fill in the blanks
+- Do the console app for extra credit or keep it for more hints

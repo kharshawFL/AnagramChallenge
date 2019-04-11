@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Anagram.Console": {
+      "commandName": "Project",
+      "commandLineArgs": "qwerty qwerty true"
+    }
+  }
+}
