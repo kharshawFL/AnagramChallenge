@@ -1,4 +1,4 @@
-# Aanagram Code Challenge
+# Anagram Code Challenge
 
 The objective of this code challange is to create a method that tests two strings to determine if those strings are anagrams.  The common definition of an anagram are two strings of characters that contain the same characters but perhaps in a different order.
 
