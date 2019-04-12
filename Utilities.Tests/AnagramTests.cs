@@ -6,6 +6,48 @@ namespace Utilities.Tests
 {
     public class AnagramTests
     {
+        
+        [Fact]
+        public void AreAnagrams_SameStrings_ReturnsTrue()
+        {
+            // arrange
+            var anagramCheck = new Anagram();
+
+            // act 
+            var result = anagramCheck.AreAnagrams("abc", "abc");
+
+            //assert
+            Assert.True(result);            
+        }
+
+        [Theory]
+        [InlineData("abc", "ABC")]
+        [InlineData("abcd", "ABCD")]
+        [InlineData("ab cd", "AB CD")]
+        public void AreAnagrams_SameWordsMixedCase_DefaultConstructor_ReturnsFalse(string word1, string word2)
+        {
+            // arrange
+            var anagramCheck = new Anagram();
+
+            // act 
+            var result = anagramCheck.AreAnagrams(word1, word2);
+
+            //assert
+            Assert.False(result);
+        }
+        [Fact]
+        public void AreAnagrams_EmptyStrings_ReturnsTrue()
+        {
+            // arrange
+            var anagramCheck = new Anagram();
+
+            // act 
+            var result = anagramCheck.AreAnagrams("", "");
+
+            //assert
+            Assert.True(result);
+        }
+
         [Theory]
         [InlineData("qwertyuio", "asdfghjkl")]
         [InlineData("zxcvbnm", "asdfgh")]
@@ -72,19 +114,6 @@ namespace Utilities.Tests
             Assert.False(result);
         }
 
-        [Fact]
-        public void AreAnagrams_EmptyStrings_ReturnsTrue()
-        {
-            // arrange
-            var anagramCheck = new Anagram();
-
-            // act 
-            var result = anagramCheck.AreAnagrams("", "");
-
-            //assert
-            Assert.True(result);
-        }
-
         [Theory]
         [InlineData("  ", " ")]
         [InlineData("\t", " ")]
@@ -127,22 +156,6 @@ namespace Utilities.Tests
         }
 
         [Theory]
-        [InlineData("abc", "ABC")]
-        [InlineData("abcd", "ABCD")]
-        [InlineData("ab cd", "AB CD")]
-        public void AreAnagrams_SameWordsMixedCase_IgnoreCaseFalse_ReturnsFalse(string word1, string word2)
-        {
-            // arrange
-            var anagramCheck = new Anagram();
-
-            // act 
-            var result = anagramCheck.AreAnagrams(word1, word2);
-
-            //assert
-            Assert.False(result);
-        }
-
-        [Theory]
         [InlineData("Abc", "abc")]
         [InlineData("ABC", "abc")]
         [InlineData("ABC", "CBA")]
@@ -166,13 +179,13 @@ namespace Utilities.Tests
         public void AreAnagrams_AnagramDifferentCase_IgnoreCaseFalse_ReturnsFalse(string word1, string word2)
         {
             // arrange
-            var anagramCheck = new Anagram(true);
+            var anagramCheck = new Anagram(false);
 
             // act 
             var result = anagramCheck.AreAnagrams(word1, word2);
 
             //assert
-            Assert.True(result);
+            Assert.False(result);
         }
 
     }
