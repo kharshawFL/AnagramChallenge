@@ -175,7 +175,7 @@ namespace Utilities.Tests
         [Theory]
         [InlineData("Abc", "abc")]
         [InlineData("ABC", "abc")]
-        [InlineData("ABC", "CBA")]
+        [InlineData("ABC", "Cba")]
         public void AreAnagrams_AnagramDifferentCase_IgnoreCaseFalse_ReturnsFalse(string word1, string word2)
         {
             // arrange
