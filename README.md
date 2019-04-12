@@ -21,7 +21,7 @@ The master branch contains an incomplete, but cleanly compilable C# .NET Core 2.
 The Completed branch is a working solution with passing tests.  No peeking.
 
 ## What is this Testing for?
-This challenge is intended to completed with a job candidate.  There does exist a simple algorith, and should be appropriate for mid or senior level devs, and perhaps with juniors with addtional guidance.
+This challenge is intended to be completed with a job candidate.  There does exist a simple algorith, and should be appropriate for mid or senior level devs, and perhaps with juniors with addtional guidance.
 
 We're looking for the following:
 - Does the candidate work with the paired developer well?
