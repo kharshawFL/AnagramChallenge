@@ -52,10 +52,6 @@ namespace WordFun.Utilities
                 secondWord = secondWord.ToUpper();
             }
 
-            var firstWordArray = firstWord.ToCharArray();
-            var secondWordArray = secondWord.ToCharArray();
-
-
             return AlphabetizeString(firstWord) == AlphabetizeString(secondWord);
         }
     }
